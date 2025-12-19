@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🚀 Distributed Key-Value Store with Tunable Consistency
+# Distributed Key-Value Store with Tunable Consistency
 
 ### A Production-Grade Dynamo-Style Storage System
 
