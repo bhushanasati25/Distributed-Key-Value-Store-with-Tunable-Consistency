@@ -1,0 +1,105 @@
+version: "3.8"
+
+services:
+  # Node 1 - Seed node
+  node1:
+    build: .
+    container_name: dynamo-node1
+    hostname: node1
+    command:
+      - "--node-id=node1"
+      - "--address=0.0.0.0"
+      - "--port=8080"
+      - "--gossip-port=7946"
+      - "--data-dir=/data"
+      - "--replication=3"
+      - "--read-quorum=2"
+      - "--write-quorum=2"
+    ports:
+      - "8001:8080"
+      - "7001:7946/udp"
+    volumes:
+      - node1-data:/data
+    networks:
+      - dynamo-net
+    healthcheck:
+      test: [ "CMD", "wget", "-qO-", "http://localhost:8080/health" ]
+      interval: 10s
+      timeout: 3s
+      retries: 3
+    restart: unless-stopped
+
+  # Node 2
+  node2:
+    build: .
+    container_name: dynamo-node2
+    hostname: node2
+    command:
+      - "--node-id=node2"
+      - "--address=0.0.0.0"
+      - "--port=8080"
+      - "--gossip-port=7946"
+      - "--data-dir=/data"
+      - "--seeds=node1:7946"
+      - "--replication=3"
+      - "--read-quorum=2"
+      - "--write-quorum=2"
+    ports:
+      - "8002:8080"
+      - "7002:7946/udp"
+    volumes:
+      - node2-data:/data
+    networks:
+      - dynamo-net
+    depends_on:
+      node1:
+        condition: service_healthy
+    healthcheck:
+      test: [ "CMD", "wget", "-qO-", "http://localhost:8080/health" ]
+      interval: 10s
+      timeout: 3s
+      retries: 3
+    restart: unless-stopped
+
+  # Node 3
+  node3:
+    build: .
+    container_name: dynamo-node3
+    hostname: node3
+    command:
+      - "--node-id=node3"
+      - "--address=0.0.0.0"
+      - "--port=8080"
+      - "--gossip-port=7946"
+      - "--data-dir=/data"
+      - "--seeds=node1:7946,node2:7946"
+      - "--replication=3"
+      - "--read-quorum=2"
+      - "--write-quorum=2"
+    ports:
+      - "8003:8080"
+      - "7003:7946/udp"
+    volumes:
+      - node3-data:/data
+    networks:
+      - dynamo-net
+    depends_on:
+      node1:
+        condition: service_healthy
+      node2:
+        condition: service_healthy
+    healthcheck:
+      test: [ "CMD", "wget", "-qO-", "http://localhost:8080/health" ]
+      interval: 10s
+      timeout: 3s
+      retries: 3
+    restart: unless-stopped
+
+networks:
+  dynamo-net:
+    driver: bridge
+
+volumes:
+  node1-data:
+  node2-data:
+  node3-data:

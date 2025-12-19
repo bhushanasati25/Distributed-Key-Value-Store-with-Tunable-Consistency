@@ -1,0 +1,15 @@
+{
+  "node_id": "node1",
+  "address": "127.0.0.1",
+  "port": 8001,
+  "gossip_port": 7001,
+  "data_dir": "./data/node1",
+  "seed_nodes": [],
+  "max_file_size": 104857600,
+  "sync_writes": false,
+  "compact_interval": 300,
+  "replication_factor": 3,
+  "read_quorum": 2,
+  "write_quorum": 2,
+  "virtual_nodes": 150
+}
