@@ -8,6 +8,7 @@
 [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 [![Architecture](https://img.shields.io/badge/Architecture-Distributed-blue?style=for-the-badge)]()
 [![CAP](https://img.shields.io/badge/CAP-AP_(Available+Partition_Tolerant)-orange?style=for-the-badge)]()
+[![Author](https://img.shields.io/badge/Author-Bhushan_Asati-purple?style=for-the-badge)](https://github.com/bhushanasati25)
 
 *A high-performance, fault-tolerant distributed key-value storage system inspired by Amazon's Dynamo whitepaper*
 
@@ -744,6 +745,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 <div align="center">
+
+**Developed by [Bhushan Asati](https://github.com/bhushanasati25)**
 
 **Made with ❤️ for distributed systems enthusiasts**
 
