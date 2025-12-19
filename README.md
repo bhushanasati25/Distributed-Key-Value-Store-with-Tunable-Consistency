@@ -735,7 +735,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - **[Amazon Dynamo Paper](https://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf)** - The foundational research that inspired this project
 - **[Bitcask Paper](https://riak.com/assets/bitcask-intro.pdf)** - Storage engine design inspiration
