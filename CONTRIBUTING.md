@@ -39,11 +39,11 @@ By participating in this project, you agree to maintain a respectful and inclusi
 # Fork the repository on GitHub
 
 # Clone your fork
-git clone https://github.com/YOUR_USERNAME/distributed-kvstore.git
-cd distributed-kvstore
+git clone https://github.com/YOUR_USERNAME/Distributed-Key-Value-Store-with-Tunable-Consistency.git
+cd Distributed-Key-Value-Store-with-Tunable-Consistency
 
 # Add upstream remote
-git remote add upstream https://github.com/distributed-kvstore/distributed-kvstore.git
+git remote add upstream https://github.com/bhushanasati25/Distributed-Key-Value-Store-with-Tunable-Consistency.git
 
 # Install dependencies
 go mod download

@@ -90,6 +90,6 @@ Breaking changes will be documented here with migration instructions.
 
 ## Links
 
-- [GitHub Repository](https://github.com/distributed-kvstore/distributed-kvstore)
-- [Issue Tracker](https://github.com/distributed-kvstore/distributed-kvstore/issues)
-- [Documentation](https://github.com/distributed-kvstore/distributed-kvstore#readme)
+- [GitHub Repository](https://github.com/bhushanasati25/Distributed-Key-Value-Store-with-Tunable-Consistency)
+- [Issue Tracker](https://github.com/bhushanasati25/Distributed-Key-Value-Store-with-Tunable-Consistency/issues)
+- [Documentation](https://github.com/bhushanasati25/Distributed-Key-Value-Store-with-Tunable-Consistency#readme)

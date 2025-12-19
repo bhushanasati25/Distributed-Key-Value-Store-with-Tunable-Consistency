@@ -109,8 +109,8 @@ This project serves as an excellent learning resource for understanding:
 
 ```bash
 # Clone the repository
-git clone https://github.com/distributed-kvstore/distributed-kvstore.git
-cd distributed-kvstore
+git clone https://github.com/bhushanasati25/Distributed-Key-Value-Store-with-Tunable-Consistency.git
+cd Distributed-Key-Value-Store-with-Tunable-Consistency
 
 # Install dependencies
 go mod download
@@ -557,7 +557,7 @@ curl http://localhost:8001/kv/key50
 ## 📁 Project Structure
 
 ```
-distributed-kvstore/
+Distributed-Key-Value-Store-with-Tunable-Consistency/
 ├── cmd/
 │   └── dynamo/
 │       └── main.go                 # Application entry point
@@ -706,8 +706,8 @@ We welcome contributions! Please follow these steps:
 
 ```bash
 # Clone your fork
-git clone https://github.com/YOUR_USERNAME/distributed-kvstore.git
-cd distributed-kvstore
+git clone https://github.com/YOUR_USERNAME/Distributed-Key-Value-Store-with-Tunable-Consistency.git
+cd Distributed-Key-Value-Store-with-Tunable-Consistency
 
 # Install dev dependencies
 go install github.com/golangci/golangci-lint/cmd/golangci-lint@latest
